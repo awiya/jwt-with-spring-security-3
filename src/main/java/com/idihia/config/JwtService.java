@@ -6,6 +6,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
 
 import java.security.Key;
 import java.util.Date;
@@ -15,6 +16,7 @@ import java.util.function.Function;
 
 import static io.jsonwebtoken.SignatureAlgorithm.HS256;
 
+@Component
 public class JwtService {
 
     private static final String SECRET_KEY = "6351665468576D5A7134743777217A25432A462D4A614E645267556B586E3272";

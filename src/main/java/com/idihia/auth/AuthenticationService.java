@@ -20,8 +20,8 @@ import static com.idihia.enums.Role.USER;
 @RequiredArgsConstructor
 public class AuthenticationService {
 
-    private UserRepository userRepository;
-    private PasswordEncoder passwordEncoder;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
 

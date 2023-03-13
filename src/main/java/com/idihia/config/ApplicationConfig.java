@@ -19,6 +19,7 @@ public class ApplicationConfig {
 
     private final UserRepository userRepository;
 
+    @Bean
     public UserDetailsService userDetailsService() {
         return username -> userRepository
                 .findByEmail(username)
@@ -33,6 +34,7 @@ public class ApplicationConfig {
         return authProvider;
     }
 
+    @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
         return authenticationConfiguration.getAuthenticationManager();
     }
